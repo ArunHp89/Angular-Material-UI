@@ -1,0 +1,62 @@
+<section class="banner">
+    <div class="container">
+  <div>
+    <div>
+      <h1>Drag and Drop</h1>
+      <p>Generate sample data with a single click. Choose from three different sample datasets to populate your store with dummy data. Use the "clothes/accessories" theme which supports products with multiple variants (size and color). Use the "paintings" theme which supports single variant (option) products. Use the "toys" sample data theme which supports single variant (option) products. Generate products, smart and custom collections, customers, and orders. Easily remove Shopify test data. </p>
+      <button mat-raised-button color="primary">Get started</button>
+      <button mat-raised-button routerLink="/contact-us">Hire Us</button>
+    </div>
+  </div>
+    </div>
+  </section>
+ <table>
+    <thead><tr><th>wee1</th><th>week2</th><th>week3</th><th>week4</th><th>week5</th><th>week6</th></tr></thead>
+    <tbody>
+        <tr><td> 
+            <div
+            cdkDropList
+            [cdkDropListData]="todo"
+            class="example-list"
+            (cdkDropListDropped)="drop($event)">
+            <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item}}</div>
+          </div>
+
+        </td>
+        <td>
+            <div
+            cdkDropList
+            [cdkDropListData]="done"
+            class="example-list"
+            (cdkDropListDropped)="drop($event)">
+            <div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
+          </div>
+        </td>
+        </tr>
+    </tbody>
+ </table>
+ <div cdkDropListGroup>
+    <div class="example-container">
+      <h2>To do</h2>
+  
+      <div
+        cdkDropList
+        [cdkDropListData]="todo"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)">
+        <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item}}</div>
+      </div>
+    </div>
+  
+    <div class="example-container">
+      <h2>Done</h2>
+  
+      <div
+        cdkDropList
+        [cdkDropListData]="done"
+        class="example-list"
+        (cdkDropListDropped)="drop($event)">
+        <div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
+      </div>
+    </div>
+  </div>

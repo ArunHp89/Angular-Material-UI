@@ -1,0 +1,96 @@
+
+<header [ngClass]="status ? 'Dark_mode_on' : 'Dark_mode_off'">
+    <div class="container">
+      <div class="row">
+        <div class="col1"> <h1 >
+          <a routerLink="">Logo</a>
+        </h1></div>
+          <div class="col2">
+            <ul>
+                <li ><a routerLink="/about-us" >About Us</a></li>
+                <li><a routerLink="/services" >Services</a></li>
+                <li><a routerLink="/blog" >Blog</a></li>
+                <li><a routerLink="/drag" >drag</a></li>
+
+                <li><a routerLink="/contact-us" >Contact Us</a></li>
+                <li>
+
+                  <mat-slide-toggle  (click)="status=!status">
+                    <a>
+                      {{ status == true ? 'Light' : 'Dark' }}    Mode
+                  </a>
+                  </mat-slide-toggle></li>
+                  <li>  <button mat-raised-button
+                    matTooltip="Go back to last page"
+                    aria-label="Button that displays a tooltip when focused or hovered over"
+                    color="basic" href="javascript:void(0)" (click)="goBack()">Back</button></li>
+            </ul>
+          </div>
+            <!-- <div class="col3"></div> -->
+      </div>
+    </div>
+  </header>
+
+<router-outlet  [ngClass]="status ? 'Dark_mode_on' : 'Dark_mode_off'">
+
+</router-outlet>
+
+
+
+
+<footer>
+  <div class="row">
+    <div class="col-md-4 col-sm-4 col-xs-12 col-md-offset-1">
+        <div class="footer-widget">
+            <h3>Our Services</h3>
+            <ul>
+                <li>
+                    <a href="/home/WebDevelopment">
+                        <i class="fas fa-angle-right"></i>Web Development
+                    </a>
+                </li>
+                <li>
+                    <a href="/home/WebDesigning">
+                        <i class="fas fa-angle-right"></i>Web Designing
+                    </a>
+                </li>
+                <li>
+                    <a href="/home/SoftwareDevelopment">
+                        <i class="fas fa-angle-right"></i>Software Development
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="footer-widget">
+            <h3>Our Location</h3>
+            <div class="footer-address-1">
+                <img class="location-img" src="https://material.angular.io/angular-white-transparent.d4d5ed2946afa9f1.svg">
+                <p>World Tech 67<br> Plot no. ITC-10, 2nd Floor,  Sector 67, Mohali</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-3 col-xs-12">
+        <div class="footer-widget">
+            <h3>Stay Connected</h3>
+            <div class="social">
+                <a target="_blank" class="fab fa-facebook-f"
+                 href="https://www.facebook.com/"><mat-icon> email</mat-icon></a>
+                <a target="_blank" href="https://www.linkedin.com/company/"
+                class="fab fa-linkedin-in">
+                <mat-icon>facebook</mat-icon>
+            </a>
+            <a target="_blank" href="https://www.linkedin.com/company/"
+                class="fab fa-linkedin-in"><mat-icon>phone_callback</mat-icon>
+            </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</footer>
+<div (click)="status=!status"
+    [ngClass]="status ? 'success' : 'danger'">
+    Some content
+</div>

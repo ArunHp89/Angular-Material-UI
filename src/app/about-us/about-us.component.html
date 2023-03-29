@@ -1,0 +1,31 @@
+<section class="banner">
+    <div class="container">
+  <div>
+    <div>
+      <h1>ABOUT US</h1>
+      <p>Bytecode Technologies is a team of qualified professionals. Our ideology is very simple, we want to provide the best quality in given timeline & pocket friendly budget. Client satisfaction is our gain and our clients are our assets.
+      </p>
+
+ <p>
+  <mat-slider min="0" max="100000" step="1000" color="accent" 
+   showTickMarks discrete [displayWith]="formatLabel">
+    <input matSliderThumb >
+  </mat-slider>
+ </p>
+      <button mat-raised-button color="primary">Get started</button>
+      <button mat-raised-button routerLink="/contact-us">Hire Us</button>
+    </div>
+  </div>
+    </div>
+  </section>
+<section><div class="container">
+  <mat-tab-group>
+    <mat-tab label="First"> <mat-icon class="example-tab-icon">thumb_up</mat-icon> Content 1 </mat-tab>
+    <mat-tab label="Second"> Content 2 </mat-tab>
+    <mat-tab label="Third"> Content 3 </mat-tab>
+  </mat-tab-group>
+  <mat-tab-group mat-align-tabs="center" backgroundColor="accent">
+    <mat-tab label="Home">Home Content</mat-tab>
+    <mat-tab label="Overview">Overview Content</mat-tab>
+  </mat-tab-group>
+</div></section>

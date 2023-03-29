@@ -1,0 +1,36 @@
+
+.banner:before{
+    content: "";
+    position: absolute;
+    background-image: url(https://material.angular.io/angular-white-transparent.d4d5ed2946afa9f1.svg);
+    background-size: 600px;
+    inset: 0;
+    background-repeat: no-repeat;
+    background-position: 80% 20px;
+    opacity: .2;
+  
+  }
+  .banner{
+    background-color: #b53f76;
+    position: relative;
+    height: 420px;
+  }
+  .banner .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    z-index: 9;
+  }
+  .banner h1 {
+    font-size: 43px !important;
+    font-weight: 600 !important;   
+     line-height: 45px;
+    margin-bottom: 14px !important;
+  }
+  .banner button.mdc-button {
+    margin-right: 15px;
+  }
